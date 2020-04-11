@@ -3,23 +3,22 @@
 
 def product_array(a)
     len=a.length
-    product=Array.new(len,1) # Initilaize product array elements to 1
-    temp=1
+    product=Array.new(len,0) # Initilaize product array elements to 1
+    result=1
     
-    #Loop to store product of left elements
+    #Loop to calculate the product of all elements of array
     for i in 0...len
-        product[i]=temp
-        temp*=a[i]
+        result*=a[i]
     end
     
-    temp=1 #reset temp variable to 1
+    # If result is not zero, to avoid division by zero
+    if result != 0
+        #Lopp to calculate
+        for i in 0...len
+            product[i]=result/a[i]
+        end
+    end
   
-    #Loop to multiply stored left products with right products
-    for i in (len-1).downto(0)
-        product[i]*=temp
-        temp*=a[i]
-    end
-    
     return product
 end
 
