@@ -5,15 +5,18 @@
 
 
 def bubble_sort(a)
-   n=a.length
-   for i in 0...n-1
-    for j in 0...n-i-1
-        if a[j]>a[j+1]
-            temp=a[j]
-            a[j]=a[j+1]
-            a[j+1]=temp
-        end
+  n = a.length
+  for i in 0...n-1 do # N-1 Passes
+    flag = 0
+    for j in 0...n-i-1 do
+      if a[j] > a[j+1]
+        tmp = a[j]
+        a[j] = a[j+1]
+        a[j+1] = tmp
+        flag = 1
+      end
     end
-   end
-   return a
+    break if flag == 0 
+  end
+  return a
 end
