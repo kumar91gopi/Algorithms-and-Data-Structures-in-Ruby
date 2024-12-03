@@ -320,6 +320,8 @@ solution of many challenges of [Leetcode](https://leetcode.com/), [Exercism](htt
 ## [LeetCode](https://leetcode.com/problems)
 1. [Insert Delete GetRandom in O(1)](https://github.com/kumar91gopi/Algorithms-and-Data-Structures-in-Ruby/blob/master/leetcode/insert_delete_get_random_o1.rb)
 2. [Binary Tree Level order Traversal](https://github.com/kumar91gopi/Algorithms-and-Data-Structures-in-Ruby/blob/master/leetcode/binary_tree_level_order_traversal.rb)
+3. [Maximum Width Ramp (Leetcode-962)](https://github.com/kumar91gopi/Algorithms-and-Data-Structures-in-Ruby/blob/master/leetcode/maximum_width_ramp.rb)
+
 
 <a name="grind-75"/>
 
