@@ -30,3 +30,25 @@ def max_width_ramp(nums)
     end
     max_width   
 end
+
+#Solution 2 (using two pointer with preprocessing)
+# @param {Integer[]} nums
+# @return {Integer}
+def max_width_ramp(nums)
+    len = nums.length
+    max_to_the_right = [0]*len
+    max_to_the_right[-1] = nums[-1]
+    (len-2).downto(0) do |i|
+        max  = max_to_the_right[i+1]<nums[i] ? nums[i] : max_to_the_right[i+1]
+        max_to_the_right[i] = max
+    end
+    max_width = 0
+    left=0
+    for right in 0...len
+        while max_to_the_right[right]<nums[left]
+            left+=1
+        end
+        max_width = [max_width, right-left].max
+    end
+    max_width   
+end
